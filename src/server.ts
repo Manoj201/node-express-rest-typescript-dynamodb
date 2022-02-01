@@ -5,7 +5,7 @@ const app = express();
 dotenv.config();
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Application works! Nice Manoj');
+  res.send('Application works! Nicely Done');
 });
 
 app.listen(process.env.PORT || 3000, () => {
