@@ -45,7 +45,7 @@ jobs:
         with:
           task-definition: aws-task-definition.json
           container-name: node_express_dynamodb
-          image: ${{ steps.build-image.outputs.image }}
+          image: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
