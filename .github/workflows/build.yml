@@ -39,6 +39,11 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
+      - name: create env file
+        run: |
+          touch .env
+          echo PORT =8080 >> .env
+
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
         env:
